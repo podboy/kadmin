@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="{{ language }}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" type="text/css" href="/static/styles/collection.css">
+    <link rel="stylesheet" type="text/css" href="/static/styles/assets.css">
+    <link rel="stylesheet" type="text/css" href="/static/styles/header.css">
+    <link rel="stylesheet" type="text/css" href="/static/styles/footer.css">
+    <link rel="icon" type="image/x-icon" href="/static/logo.svg">
+    <style>
+    </style>
+</head>
+
+<body>
+    <div class="navigation-bar">
+        <button id="navbutton-home" class="navbutton" onclick="window.location.href='/'"><img
+                src="/static/icons/home.svg" alt="home" /></button>
+        <button id="navbutton-back" class="navbutton" onclick="window.history.back()"><img src="/static/icons/back.svg"
+                alt="back" /></button>
+    </div>
+
+    <div class="main-body">
+        <form class="collector" method="post" style="width: 800px;">
+            <div class="inputbox">
+                <input type="text" id="keyname" name="keyname" placeholder="{{ input_keyname_placeholder }}">
+                <input type="button" value="{{ input_generate_value }}" onclick="window.location.href='/generate'">
+                <input type="button" id="button-upload" value="{{ input_upload_value }}">
+                <!-- <button id="button-private"><img src="/static/icons/upload.svg" alt="upload" /></button> -->
+            </div>
+            <div class="inputbox">
+                <textarea id="private" name="private" required>{{ input_private_placeholder }}</textarea>
+            </div>
+            <div class="buttonbox">
+                <input type="submit" value="{{ input_submit_value }}">
+            </div>
+        </form>
+    </div>
+
+    <div class="bottom-bar">
+        <a href="{{ urlhome }}" target="_blank" rel="noopener noreferrer">{{ project }}</a>&nbsp-&nbsp{{ version }}
+    </div>
+
+    <script>
+        function handleFileUpload(event, targetInputId) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    document.getElementById(targetInputId).value = e.target.result;
+                };
+                reader.readAsText(file);
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("button-private").addEventListener("click", function () {
+                const fileInput = document.createElement("input");
+                fileInput.type = "file";
+                fileInput.style.display = "none";
+                document.body.appendChild(fileInput);
+                fileInput.click();
+                fileInput.addEventListener("change", function (event) {
+                    handleFileUpload(event, "private");
+                    document.body.removeChild(fileInput);
+                });
+            });
+
+            document.getElementById("navbutton-public").addEventListener("click", function () {
+                const fileInput = document.createElement("input");
+                fileInput.type = "file";
+                fileInput.accept = ".pub";
+                fileInput.style.display = "none";
+                document.body.appendChild(fileInput);
+                fileInput.click();
+                fileInput.addEventListener("change", function (event) {
+                    handleFileUpload(event, "public");
+                    document.body.removeChild(fileInput);
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

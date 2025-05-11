@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="{{ language }}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" type="text/css" href="/static/styles/collection.css">
+    <link rel="stylesheet" type="text/css" href="/static/styles/assets.css">
+    <link rel="stylesheet" type="text/css" href="/static/styles/header.css">
+    <link rel="stylesheet" type="text/css" href="/static/styles/footer.css">
+    <link rel="icon" type="image/x-icon" href="/static/logo.svg">
+    <style>
+        .content-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow-y: auto;
+            position: absolute;
+            bottom: 60px;
+            top: 80px;
+            right: 0;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navigation-bar">
+        <button id="navbutton-logo" class="navbutton"><img src="/static/logo.svg" alt="logo" /></button>
+        <button id="navbutton-profile" class="navbutton" onclick="window.location.href='/profile'"><img
+                src="/static/icons/user.svg" alt="user" /></button>
+        <button id="navbutton-back" class="navbutton" onclick="window.history.back()"><img
+                src="/static/icons/back.svg" alt="back" /></button>
+        <button id="navbutton-refresh" class="navbutton" onclick="location.reload()"><img
+                src="/static/icons/refresh.svg" alt="refresh" /></button>
+        <div class="searchbar">
+            <button id="navbutton-search" class="navbutton" onclick="document.querySelector('.searchbox').focus()"><img
+                    src="/static/icons/search.svg" alt="search" /></button>
+            <input type="text" id="navigation-searchbox" class="searchbox" placeholder="{{ search_placeholder }}" />
+        </div>
+        <button id="navbutton-create" class="navbutton" onclick="window.location.href='/create'"><img
+                src="/static/icons/create.svg" alt="create" /></button>
+    </div>
+
+    <div class="main-body">
+    </div>
+
+    <div class="bottom-bar">
+        <a href="{{ urlhome }}" target="_blank" rel="noopener noreferrer">{{ project }}</a>&nbsp-&nbsp{{ version }}
+    </div>
+</body>
+
+</html>

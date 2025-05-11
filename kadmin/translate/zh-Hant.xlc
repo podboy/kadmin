@@ -1,0 +1,40 @@
+language = "zh-Hant"
+
+[login]
+language = "zh-Hant"
+title = "登錄"
+input_username_placeholder = "用戶"
+input_password_placeholder = "密碼"
+input_submit_value = "登錄"
+input_password_is_null = "請輸入密碼"
+input_verify_error = "用戶名或密碼錯誤"
+
+[create]
+language = "zh-Hant"
+title = "創建"
+input_keyname_placeholder = "名稱"
+input_private_placeholder = "私鑰"
+input_public_placeholder = "公鑰"
+input_generate_value = "生成"
+input_upload_value = "上傳"
+input_submit_value = "存檔"
+
+[generate]
+language = "zh-Hant"
+title = "生成"
+input_keyname_placeholder = "名稱"
+input_comment_placeholder = "注釋"
+input_submit_value = "生成"
+
+[dashboard]
+language = "zh-Hant"
+title = "儀表板"
+search_placeholder = "搜索"
+
+[overview]
+language = "zh-Hant"
+title = "詳覽"
+
+[profile]
+language = "zh-Hant"
+title = "配置"

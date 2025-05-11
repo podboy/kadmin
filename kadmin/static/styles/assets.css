@@ -1,0 +1,11 @@
+.main-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+    position: absolute;
+    bottom: 40px;
+    top: 60px;
+    right: 0;
+    left: 0;
+}

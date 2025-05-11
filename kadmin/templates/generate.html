@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="{{ language }}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" type="text/css" href="/static/styles/collection.css">
+    <link rel="stylesheet" type="text/css" href="/static/styles/assets.css">
+    <link rel="stylesheet" type="text/css" href="/static/styles/header.css">
+    <link rel="stylesheet" type="text/css" href="/static/styles/footer.css">
+    <link rel="icon" type="image/x-icon" href="/static/logo.svg">
+    <style>
+    </style>
+</head>
+
+<body>
+    <div class="navigation-bar">
+        <button id="navbutton-home" class="navbutton" onclick="window.location.href='/'"><img
+                src="/static/icons/home.svg" alt="home" /></button>
+        <button id="navbutton-back" class="navbutton" onclick="window.history.back()"><img
+                src="/static/icons/back.svg" alt="back" /></button>
+    </div>
+
+    <div class="main-body">
+        <form class="collector" method="post" style="width: 300px;">
+            <select id="keytype" name="keytype" required>
+                <option value="rsa">rsa</option>
+            </select>
+            <input type="text" id="keyname" name="keyname" placeholder="{{ input_keyname_placeholder }}" required
+                oninput="autoSetComment()">
+            <input type="text" id="comment" name="comment" placeholder="{{ input_comment_placeholder }}" required>
+            <input type="submit" value="{{ input_submit_value }}">
+    </div>
+    </div>
+
+    <div class="bottom-bar">
+        <a href="{{ urlhome }}" target="_blank" rel="noopener noreferrer">{{ project }}</a>&nbsp-&nbsp{{ version }}
+    </div>
+
+    <script>
+        function autoSetComment() {
+            const keyname = document.getElementById("keyname").value;
+            const comment = document.getElementById("comment").value;
+            if (keyname != comment) {
+                document.getElementById("comment").value = keyname;
+            }
+        }
+    </script>
+</body>
+
+</html>

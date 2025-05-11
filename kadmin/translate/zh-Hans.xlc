@@ -1,0 +1,40 @@
+language = "zh-Hans"
+
+[login]
+language = "zh-Hans"
+title = "登录"
+input_username_placeholder = "用户"
+input_password_placeholder = "密码"
+input_submit_value = "登录"
+input_password_is_null = "请输入密码"
+input_verify_error = "用户名或密码错误"
+
+[create]
+language = "zh-Hans"
+title = "创建"
+input_keyname_placeholder = "名称"
+input_private_placeholder = "私钥"
+input_public_placeholder = "公钥"
+input_generate_value = "生成"
+input_upload_value = "上传"
+input_submit_value = "保存"
+
+[generate]
+language = "zh-Hans"
+title = "生成"
+input_keyname_placeholder = "名称"
+input_comment_placeholder = "注释"
+input_submit_value = "生成"
+
+[dashboard]
+language = "zh-Hans"
+title = "仪表板"
+search_placeholder = "搜索"
+
+[overview]
+language = "zh-Hans"
+title = "详览"
+
+[profile]
+language = "zh-Hans"
+title = "配置"

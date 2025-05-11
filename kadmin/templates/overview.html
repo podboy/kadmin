@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="{{ language }}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" type="text/css" href="/static/styles/collection.css">
+    <link rel="stylesheet" type="text/css" href="/static/styles/assets.css">
+    <link rel="stylesheet" type="text/css" href="/static/styles/header.css">
+    <link rel="stylesheet" type="text/css" href="/static/styles/footer.css">
+    <link rel="icon" type="image/x-icon" href="/static/logo.svg">
+    <style>
+    </style>
+</head>
+
+<body>
+    <div class="navigation-bar">
+        <button id="navbutton-home" class="navbutton" onclick="window.location.href='/'"><img
+                src="/static/icons/home.svg" alt="home" /></button>
+        <button id="navbutton-back" class="navbutton" onclick="window.history.back()"><img
+                src="/static/icons/back.svg" alt="back" /></button>
+        <button id="navbutton-refresh" class="navbutton" onclick="location.reload()"><img
+                src="/static/icons/refresh.svg" alt="refresh" /></button>
+        <button id="navbutton-edit" class="navbutton" onclick="window.location.href='/'"><img
+                src="/static/icons/edit.svg" alt="edit" /></button>
+        <button id="navbutton-delete" class="navbutton" onclick="window.location.href='/'"><img
+                src="/static/icons/delete.svg" alt="delete" /></button>
+    </div>
+
+    <div class="main-body">
+    </div>
+
+    <div class="bottom-bar">
+        <a href="{{ urlhome }}" target="_blank" rel="noopener noreferrer">{{ project }}</a>&nbsp-&nbsp{{ version }}
+    </div>
+</body>
+
+</html>

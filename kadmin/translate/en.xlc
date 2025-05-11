@@ -1,0 +1,40 @@
+language = "en"
+
+[login]
+language = "en"
+title = "Login"
+input_username_placeholder = "Username"
+input_password_placeholder = "Password"
+input_submit_value = "Sign In"
+input_password_is_null = "Please enter your password"
+input_verify_error = "Incorrect username or password"
+
+[create]
+language = "en"
+title = "Create"
+input_keyname_placeholder = "Name"
+input_private_placeholder = "Private key"
+input_public_placeholder = "Public key"
+input_generate_value = "Generate"
+input_upload_value = "Upload"
+input_submit_value = "Save"
+
+[generate]
+language = "en"
+title = "Generate"
+input_keyname_placeholder = "Name"
+input_comment_placeholder = "Comment"
+input_submit_value = "Generate"
+
+[dashboard]
+language = "en"
+title = "Dashboard"
+search_placeholder = "Search"
+
+[overview]
+language = "en"
+title = "Overview"
+
+[profile]
+language = "en"
+title = "Profile"
